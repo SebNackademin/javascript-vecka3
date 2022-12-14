@@ -44,8 +44,13 @@
                         <div><br></div>
 
                         <!-- Lägg Till Knapp -->
-                        <button onclick="createStudent()">Lägg till</button>
+                        <button onclick="createStudent(inputName.value, inputPhone.value, inputYears.value)">Lägg till</button>
                     </div>
+
+                    <br>
+                    <span>Filtrera</span>
+                    <input id="filterInput" onkeyup="filterStudents(filterInput.value)">
+                    <br>
                     
                     <div class="class-list">
                         <!-- LIST HEADER -->
@@ -58,9 +63,9 @@
                         <!-- LIST ITEMS -->
                         <!-- Generates from form 
                             <div class="class-list-item">
-                                <span>inputName</span>
-                                <span>inputPhone</span>
-                                <span>inputYears</span>
+                                <span id="class-list-item-name">inputName</span>
+                                <span id="class-list-item-phone">inputPhone</span>
+                                <span id="class-list-item-years">inputYears</span>
                                 <button onclick="removeStudent()">btnText</button>
                             </div>
                         -->
